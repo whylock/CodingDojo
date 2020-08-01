@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Periodic Table</title>
+	</head>
+	<body>
+		<div class="grid-container">
+			<!-- <ol class="colrow">
+				<li id="gp">Group Period</li>
+				<li id="col-1">1</li>
+				<li id="col-2">2</li>
+				<li id="col-3">3</li>
+				<li id="col-4">4</li>
+				<li id="col-5">5</li>
+				<li id="col-6">6</li>
+				<li id="col-7">7</li>
+				<li id="col-8">8</li>
+				<li id="col-9">9</li>
+				<li id="col-10">10<li>
+				<li id="col-11">11<li>
+				<li id="col-12">12<li>
+				<li id="col-13">13<li>
+				<li id="col-15">14<li>
+				<li id="col-15">15<li>
+				<li id="col-16">16<li>
+				<li id="col-17">17<li>
+				<li id="col-18">18<li>
+				<li id="row-1">1</li>
+				<li id="row-2">2</li>
+				<li id="row-3">3</li>
+				<li id="row-4">4</li>
+				<li id="row-5">5</li>
+				<li id="row-6">6</li>
+				<li id="row-7">7</li>
+				<li id="row-8">*Lanthanoids</span>
+				<li id="row-9">**Actinoids</span>
+                </ol> not working -->
+			<ol>
+				<li id="H" class="left"><span>1</span> H <span>1.008</span></li>
+				<li id="He" class="right"><span>2</span> He <span>4.0026</span></li>
+				<li id="Li" class="left"><span>3</span> Li <span>6.94</span></li>
+				<li id="Be" class="left"><span>4</span> Be <span>9.0122</span></li>
+				<li id="B" class="right"><span>5</span> B <span>10.81</span></li>
+				<li id="C" class="right"><span>6</span> C <span>12.011</span></li>
+				<li id="N" class="right"><span>7</span>N<span>14.007</span></li>
+				<li id="O" class="right"><span>8</span>O<span>15.999</span></li>
+				<li id="F" class="right"><span>9</span>F<span>18.998</span></li>
+				<li id="Ne" class="right"><span>10</span>Ne<span>20.180</span></li>
+				<li id="Na" class="left"><span>11</span>Na<span>22.990</span></li>
+				<li id="Mg" class="left"><span>12</span>Mg<span>24.305</span></li>
+				<li id="Al" class="right"><span>13</span>Al<span>26.982</span></li>
+				<li id="Si" class="right"><span>14</span>Si<span>28.085</span></li>
+				<li id="P" class="right"><span>15</span>P<span>30.974</span></li>
+				<li id="S" class="right"><span>16</span>S<span>32.06</span></li>
+				<li id="Cl" class="right"><span>17</span>Cl<span>35.45</span></li>
+				<li id="Ar" class="right"><span>18</span>Ar<span>39.948</span></li>
+				<li id="K" class="left"><span>19</span>K<span>39.098</span></li>
+				<li id="Ca" class="left"><span>20</span>Ca<span>40.078</span></li>
+				<li id="Sc" class="middle"><span>21</span>Sc<span>44.956</span></li>
+				<li id="Ti" class="middle"><span>22</span>Ti<span>47.867</span></li>
+				<li id="V" class="middle"><span>23</span>V<span>50.942</span></li>
+				<li id="Cr" class="middle"><span>24</span>Cr<span>51.996</span></li>
+				<li id="Mn" class="middle"><span>25</span>Mn<span>54.938</span></li>
+				<li id="Fe" class="middle"><span>26</span>Fe<span>55.845</span></li>
+				<li id="Co" class="middle"><span>27</span>Co<span>58.933</span></li>
+				<li id="Ni" class="middle"><span>28</span>Ni<span>58.693</span></li>
+				<li id="Cu" class="middle"><span>29</span>Cu<span>63.546</span></li>
+				<li id="Zn" class="middle"><span>30</span>Zn<span>65.38</span></li>
+				<li id="Ga" class="right"><span>31</span>Ga<span>69.723</span></li>
+				<li id="Ge" class="right"><span>32</span>Ge<span>72.63</span></li>
+				<li id="As" class="right"><span>33</span>As<span>74.922</span></li>
+				<li id="Se" class="right"><span>34</span>Se<span>78.96</span></li>
+				<li id="Br" class="right"><span>35</span>Br<span>79.904</span></li>
+				<li id="Kr" class="right"><span>36</span>Kr<span>83.798</span></li>
+				<li id="Rb" class="left"><span>37</span>Rb<span>85.468</span></li>
+				<li id="Sr" class="left"><span>38</span>Sr<span>87.62</span></li>
+				<li id="Y" class="middle"><span>39</span>Y<span>88.906</span></li>
+				<li id="Zr" class="middle"><span>40</span>Zr<span>21.224</span></li>
+				<li id="Nb" class="middle"><span>41</span>Nb<span>91.906</span></li>
+				<li id="Mo" class="middle"><span>42</span>Mo<span>95.96</span></li>
+				<li id="Tc" class="middle"><span>43</span>Tc<span>[97.91]</span></li>
+				<li id="Ru" class="middle"><span>44</span>Ru<span>101.07</span></li>
+				<li id="Rh" class="middle"><span>45</span>Rh<span>102.91</span></li>
+				<li id="Pd" class="middle"><span>46</span>Pd<span>106.42</span></li>
+				<li id="Ag" class="middle"><span>47</span>Ag<span>107.87</span></li>
+				<li id="Cd" class="middle"><span>48</span>Cd<span>112.41</span></li>
+				<li id="In" class="right"><span>49</span>In<span>114.82</span></li>
+				<li id="Sn" class="right"><span>50</span>Sn<span>118.71</span></li>
+				<li id="Sb" class="right"><span>51</span>Sb<span>121.76</span></li>
+				<li id="Te" class="right"><span>52</span>Te<span>127.60</span></li>
+				<li id="I" class="right"><span>53</span>I<span>126.90</span></li>
+				<li id="Xe" class="right"><span>54</span>Xe<span>131.29</span></li>
+				<li id="Cs" class="left"><span>55</span>Cs<span>132.91</span></li>
+				<li id="Ba" class="left"><span>56</span>Ba<span>137.33</span></li>
+				<li id="La" class="bottom"><span>57</span>La<span>138.91</span></li>
+				<li id="Ce" class="bottom"><span>58</span>Ce<span>140.12</span></li>
+				<li id="Pr" class="bottom"><span>59</span>Pr<span>140.91</span></li>
+				<li id="Nd" class="bottom"><span>60</span>Nd<span>144.24</span></li>
+				<li id="Pm" class="bottom"><span>61</span>Pm<span>[144.91]</span></li>
+				<li id="Sm" class="bottom"><span>62</span>Sm<span>150.36</span></li>
+				<li id="Eu" class="bottom"><span>63</span>Eu<span>151.96</span></li>
+				<li id="Gd" class="bottom"><span>64</span>Gd<span>157.25</span></li>
+				<li id="Tb" class="bottom"><span>65</span>Tb<span>158.93</span></li>
+				<li id="Dy" class="bottom"><span>66</span>Dy<span>162.50</span></li>
+				<li id="Ho" class="bottom"><span>67</span>Ho<span>164.93</span></li>
+				<li id="Er" class="bottom"><span>68</span>Er<span>167.26</span></li>
+				<li id="Tm" class="bottom"><span>69</span>Tm<span>168.93</span></li>
+				<li id="Yb" class="bottom"><span>70</span>Yb<span>173.05</span></li>
+				<li id="Lu" class="middle"><span>71</span>Lu<span>174.97</span></li>
+				<li id="Hf" class="middle"><span>72</span>Hf<span>178.49</span></li>
+				<li id="Ta" class="middle"><span>73</span>Ta<span>180.95</span></li>
+				<li id="W" class="middle"><span>74</span>W<span>183.84</span></li>
+				<li id="Re" class="middle"><span>75</span>Re<span>186.21</span></li>
+				<li id="Os" class="middle"><span>76</span>Os<span>190.23</span></li>
+				<li id="Ir" class="middle"><span>77</span>Ir<span>192.22</span></li>
+				<li id="Pt" class="middle"><span>78</span>Pt<span>195.08</span></li>
+				<li id="Au" class="middle"><span>79</span>Au<span>196.97</span></li>
+				<li id="Hg" class="middle"><span>80</span>Hg<span>200.59</span></li>
+				<li id="Tl" class="right"><span>81</span>Tl<span>204.38</span></li>
+				<li id="Pb" class="right"><span>82</span>Pb<span>207.02</span></li>
+				<li id="Bi" class="right"><span>83</span>Bi<span>208.98</span></li>
+				<li id="Po" class="right"><span>84</span>Po<span>[208.98]</span></li>
+				<li id="At" class="right"><span>85</span>At<span>[209.99]</span></li>
+				<li id="Rn" class="right"><span>86</span>Rn<span>[222.02]</span></li>
+				<li id="Fr" class="left"><span>87</span>Fr<span>[223.02]</span></li>
+				<li id="Ra" class="left"><span>88</span>Ra<span>[226.03]</span></li>
+				<li id="Ac" class="bottom"><span>89</span>Ac<span>[227.03]</span></li>
+				<li id="Th" class="bottom"><span>90</span>Th<span>232.04</span></li>
+				<li id="Pa" class="bottom"><span>91</span>Pa<span>231.04</span></li>
+				<li id="U" class="bottom"><span>92</span>U<span>238.03</span></li>
+				<li id="Np" class="bottom"><span>93</span>Np<span>[237.05]</span></li>
+				<li id="Pu" class="bottom"><span>94</span>Pu<span>[244.06]</span></li>
+				<li id="Am" class="bottom"><span>95</span>Am<span>[243.06]</span></li>
+				<li id="Cm" class="bottom"><span>96</span>Cm<span>[247.07]</span></li>
+				<li id="Bk" class="bottom"><span>97</span>Bk<span>[247.07]</span></li>
+				<li id="Cf" class="bottom"><span>98</span>Cf<span>[251.08]</span></li>
+				<li id="Es" class="bottom"><span>99</span>Es<span>[252.08]</span></li>
+				<li id="Fm" class="bottom"><span>100</span>Fm<span>[257.10]</span></li>
+				<li id="Md" class="bottom"><span>101</span>Md<span>[228.10]</span></li>
+				<li id="No" class="bottom"><span>102</span>No<span>[259.10]</span></li>
+				<li id="Lr" class="middle"><span>103</span>Lr<span>[262.11]</span></li>
+				<li id="Rf" class="middle"><span>104</span>Rf<span>[265.12]</span></li>
+				<li id="Db" class="middle"><span>105</span>Db<span>[268.13]</span></li>
+				<li id="Sg" class="middle"><span>106</span>Sg<span>[271.13]</span></li>
+				<li id="Bh" class="middle"><span>107</span>Bh<span>[270]</span></li>
+				<li id="Hs" class="middle"><span>108</span>Hs<span>[277.15]</span></li>
+				<li id="Mt" class="middle"><span>109</span>Mt<span>[276.15]</span></li>
+				<li id="Ds" class="middle"><span>110</span>Ds<span>[281.16]</span></li>
+				<li id="Rg" class="middle"><span>111</span>Rg<span>[280.16]</span></li>
+				<li id="Cn" class="middle"><span>112</span>Cn<span>[285.17]</span></li>
+				<li id="Uut" class="right"><span>113</span>Uut<span>[284.18]</span></li>
+				<li id="Fl" class="right"><span>114</span>Fl<span>[289.19]</span></li>
+				<li id="Uup" class="right"><span>115</span>Uup<span>[288.19]</span></li>
+				<li id="Lv" class="right"><span>116</span>Lv<span>[293]</span></li>
+				<li id="Uus" class="right"><span>117</span>Uus<span>[294]</span></li>
+				<li id="Uuo" class="right"><span>118</span>Uuo<span>[294]</span></li>
+			</ol>
+		</div>
+	</body>
+</html>

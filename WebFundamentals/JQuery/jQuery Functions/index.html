@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>jQuery</title>
+	</head>
+	<body>
+		<div class="click">
+			<h1>.click</h1>
+			<button>DANGER</button>
+			<p>Click the button, if you dare!</p>
+		</div>
+		<div class="hide">
+			<h1>.hide</h1>
+			<p>Click for magic!</p>
+		</div>
+		<div class="show"></div>
+		<h1 style="display: none;">.show</h1>
+		show!!!!!!!!!!! ME!!!!!!!!!!!
+		<div class="toggle">
+			<h1>.toggle</h1>
+			<img src="./lightOff.png" alt="" />
+			<img src="./lightOn.png" alt="" />
+		</div>
+		<div class="slideDown">
+			<h1>.slideDown</h1>
+			<p>A long time ago in a galaxy far, far away....</p>
+		</div>
+		<div class="slideUp">
+			<h1>.slideUp</h1>
+			<p>And up</p>
+		</div>
+		<div class="slideToggle">
+			<h1>.slideToggle</h1>
+			<p>up down up down up down</p>
+			<div class="square" style="width: 20px; height: 20px; background-color: blue;"></div>
+		</div>
+		<div class="fadeIn">
+			<p>fade me in, Scotty.</p>
+		</div>
+		<div class="fadeOut">
+			<p>fade me out, Scotty.</p>
+		</div>
+		<div class="addClass">
+			<div>DOOM!</div>
+		</div>
+		<div class="before">
+			<div>goodbye</div>
+		</div>
+		<div class="after">
+			<div>hello</div>
+		</div>
+		<div class="append">
+			<button>Append</button>
+		</div>
+		<div class="html">
+			<p>Delete me if you can!</p>
+		</div>
+		<div class="attr">
+			<form action="post"></form>
+		</div>
+		</div>
+		<div class="val">
+			<input type="text" name="example" id="val" placeholder="Sup Dudes">
+		</div>
+		<div class="text">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+		
+			$(".click button").click(function(){
+				alert('WHO DARES CLICK THE BUTTON!')
+			})
+
+			$('.hide').click(function(){
+				$(this).hide();
+			})
+
+			$(".show").click(function(){
+				$('.show').show('slow')
+			})
+
+		</script>
+
+	</body>
+</html>

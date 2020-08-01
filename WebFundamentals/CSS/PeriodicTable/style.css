@@ -1,0 +1,659 @@
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(19, 75px);
+	grid-template-rows: repeat(10, 75px);
+	column-gap: 10px;
+	row-gap: 10px;
+}
+
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+.colrow {
+	display: inline-grid;
+	border: none;
+	text-align: center;
+	width: 75px;
+	height: 75px;
+}
+
+.left {
+	text-align: center;
+	vertical-align: middle;
+	background-color: #689bff;
+	width: 75px;
+	height: 75px;
+}
+
+.middle {
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fd9a98;
+	width: 75px;
+	height: 75px;
+}
+
+.right {
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fecb00;
+	width: 75px;
+	height: 75px;
+}
+
+.bottom {
+	text-align: center;
+	vertical-align: middle;
+	background-color: #1dca21;
+	width: 75px;
+	height: 75px;
+}
+
+span {
+	display: block;
+	font-size: 15px;
+	margin: 0;
+}
+
+ol {
+	list-style: none;
+	display: inline-grid;
+	padding: 0;
+}
+
+li {
+	border: 2px solid black;
+	font-size: 30px;
+	margin: 2px;
+}
+
+/* #gp {
+	grid-area: 1 / 1 / 1 / 1;
+}
+
+#col-2 {
+	grid-area: 1 / 2 / 1 / 2;
+}
+
+#col-3 {
+	grid-area: 1 / 3 / 1 / 3;
+}
+
+#col-4 {
+	grid-area: 1 / 4 / 1 / 4;
+}
+
+#col-5 {
+	grid-area: 1 / 5 / 1 / 5;
+}
+
+#col-6 {
+	grid-area: 1 / 6 / 1 / 6;
+}
+
+#col-7 {
+	grid-area: 1 / 7 / 1 / 7;
+}
+
+#col-8 {
+	grid-area: 1 / 8 / 1 / 8;
+}
+
+#col-9 {
+	grid-area: 1 / 9 / 1 / 9;
+}
+
+#col-10 {
+	grid-area: 1 / 10 / 1 / 10;
+}
+
+#col-11 {
+	grid-area: 1 / 11 / 1 / 11;
+}
+
+#col-12 {
+	grid-area: 1 / 12 / 1 / 12;
+}
+
+#col-13 {
+	grid-area: 1 / 13 / 1 / 13;
+}
+
+#col-14 {
+	grid-area: 1 / 14 / 1 / 14;
+}
+
+#col-15 {
+	grid-area: 1 / 15 / 1 / 15;
+}
+
+#col-16 {
+	grid-area: 1 / 16 / 1 / 16;
+}
+
+#col-17 {
+	grid-area: 1 / 17 / 1 / 17;
+}
+
+#col-18 {
+	grid-area: 1 / 18 / 1 / 18;
+}
+
+#row-1 {
+	grid-area: 2 / 1 / 2 / 1;
+}
+
+#row-2 {
+	grid-area: 3 / 1 / 3 / 1;
+}
+
+#row-3 {
+	grid-area: 4 / 1 / 4 / 1;
+}
+
+#row-4 {
+	grid-area: 5 / 1 / 5 / 1;
+}
+
+#row-5 {
+	grid-area: 6 / 1 / 6 / 1;
+}
+
+#row-6 {
+	grid-area: 7/ 1 / 7 / 1;
+}
+
+#row-7 {
+	grid-area: 8 / 1 / 8 / 1;
+}
+
+#row-8 {
+	grid-area: 9 / 1 / 9 / 1;
+}
+
+#row-9 {
+	grid-area: 10 / 1 / 10 / 1;
+} 
+Colrow grid system now working.
+*/
+
+#H {
+	grid-area: 2 / 2 / 2 / 2;
+}
+
+#He {
+	grid-area: 2 / 19 / 2 / 19;
+}
+
+#Li {
+	grid-area: 3 / 2 / 3 / 2;
+}
+
+#Be {
+	grid-area: 3 / 3 / 3 / 3;
+}
+
+#B {
+	grid-area: 3 / 14 / 3 / 14;
+}
+
+#C {
+	grid-area: 3 / 15 / 3 / 15;
+}
+
+#N {
+	grid-area: 3 / 16 / 3 / 16;
+}
+
+#O {
+	grid-area: 3 / 17 / 3 / 17;
+}
+
+#F {
+	grid-area: 3 / 18 / 3 / 18;
+}
+
+#Ne {
+	grid-area: 3 / 19 / 9 / 19;
+}
+
+#Na {
+	grid-area: 4 / 2 / 4 / 2;
+}
+
+#Mg {
+	grid-area: 4 / 3 / 4 / 3;
+}
+
+#Al {
+	grid-area: 4 / 14 / 4 / 14;
+}
+
+#Si {
+	grid-area: 4 / 15 / 4 / 15;
+}
+
+#P {
+	grid-area: 4 / 16 / 4 / 16;
+}
+
+#S {
+	grid-area: 4 / 17 / 4 / 17;
+}
+
+#Cl {
+	grid-area: 8 / 18 / 4 / 18;
+}
+
+#Ar {
+	grid-area: 4 / 19 / 4 / 19;
+}
+
+#K {
+	grid-area: 5 / 2 / 5 / 2;
+}
+
+#Ca {
+	grid-area: 5 / 3 / 5 / 3;
+}
+
+#Sc {
+	grid-area: 5 / 4 / 5 / 4;
+}
+
+#Ti {
+	grid-area: 5 / 5 / 5 / 5;
+}
+
+#V {
+	grid-area: 5 / 6 / 5 / 6;
+}
+
+#Cr {
+	grid-area: 5 / 7 / 5 / 7;
+}
+
+#Mn {
+	grid-area: 5 / 8 / 5 / 8;
+}
+
+#Fe {
+	grid-area: 5 / 9 / 5 / 9;
+}
+
+#Co {
+	grid-area: 5 / 10 / 5 / 10;
+}
+
+#Ni {
+	grid-area: 5 / 11 / 5 / 11;
+}
+
+#Cu {
+	grid-area: 5 / 12 / 5 / 12;
+}
+
+#Zn {
+	grid-area: 5 / 13 / 5 / 13;
+}
+
+#Ga {
+	grid-area: 5 / 14 / 5 / 14;
+}
+
+#Ge {
+	grid-area: 5 / 15 / 5 / 15;
+}
+
+#As {
+	grid-area: 5 / 16 / 5 / 16;
+}
+
+#Se {
+	grid-area: 5 / 17 / 5 / 17;
+}
+
+#Br {
+	grid-area: 5 / 18 / 5 / 18;
+}
+
+#Kr {
+	grid-area: 5 / 19 / 5 / 19;
+}
+
+#Rb {
+	grid-area: 6 / 2 / 6 / 2;
+}
+
+#Sr {
+	grid-area: 6 / 3 / 6 / 3;
+}
+
+#Y {
+	grid-area: 6 / 4 / 6 / 4;
+}
+
+#Zr {
+	grid-area: 6 / 5 / 6 / 5;
+}
+
+#Nb {
+	grid-area: 6 / 6 / 6 / 6;
+}
+
+#Mo {
+	grid-area: 6 / 7 / 6 / 7;
+}
+
+#Tc {
+	grid-area: 6 / 8 / 6 / 8;
+}
+
+#Ru {
+	grid-area: 6 / 9 / 6 / 9;
+}
+
+#Rh {
+	grid-area: 6 / 10 / 6 / 10;
+}
+
+#Pd {
+	grid-area: 6 / 11 / 6 / 11;
+}
+
+#Ag {
+	grid-area: 6 / 12 / 6 / 12;
+}
+
+#Cd {
+	grid-area: 6 / 13 / 6 / 13;
+}
+
+#In {
+	grid-area: 6 / 14 / 6 / 14;
+}
+
+#Sn {
+	grid-area: 6 / 15 / 6 / 15;
+}
+
+#Sb {
+	grid-area: 6 / 16 / 6 / 16;
+}
+
+#Te {
+	grid-area: 6 / 17 / 6 / 17;
+}
+
+#I {
+	grid-area: 6 / 18 / 6 / 18;
+}
+
+#Xe {
+	grid-area: 6 / 19 / 6 / 19;
+}
+
+#Cs {
+	grid-area: 7 / 2 / 7 / 2;
+}
+
+#Ba {
+	grid-area: 7 / 3 / 7 / 3;
+}
+
+#La {
+	grid-area: 9 / 4 / 9 / 4;
+}
+
+#Ce {
+	grid-area: 9 / 5 / 9 / 5;
+}
+
+#Pr {
+	grid-area: 9 / 6 / 9 / 6;
+}
+
+#Nd {
+	grid-area: 9 / 7 / 9 / 7;
+}
+
+#Pm {
+	grid-area: 9 / 8 / 9 / 8;
+}
+
+#Sm {
+	grid-area: 9 / 9 / 9 / 9;
+}
+
+#Eu {
+	grid-area: 9 / 10 / 9 / 10;
+}
+
+#Gd {
+	grid-area: 9 / 11 / 9 / 11;
+}
+
+#Tb {
+	grid-area: 9 / 12 / 9 / 12;
+}
+
+#Dy {
+	grid-area: 9 / 13 / 9 / 13;
+}
+
+#Ho {
+	grid-area: 9 / 14 / 9 / 14;
+}
+
+#Er {
+	grid-area: 9 / 15 / 9 / 15;
+}
+
+#Tm {
+	grid-area: 9 / 16 / 9 / 16;
+}
+
+#Yb {
+	grid-area: 9 / 17 / 9 / 17;
+}
+
+#Lu {
+	grid-area: 7 / 4 / 7 / 4;
+}
+
+#Hf {
+	grid-area: 7 / 5 / 7 / 5;
+}
+
+#Ta {
+	grid-area: 7 / 6 / 7 / 6;
+}
+
+#W {
+	grid-area: 7 / 7 / 7 / 7;
+}
+
+#Re {
+	grid-area: 7 / 8 / 7 / 8;
+}
+
+#Os {
+	grid-area: 7 / 9 / 7 / 9;
+}
+
+#Ir {
+	grid-area: 7 / 10 / 7 / 10;
+}
+
+#Pt {
+	grid-area: 7 / 11 / 7 / 11;
+}
+
+#Au {
+	grid-area: 7 / 12 / 7 / 12;
+}
+
+#Hg {
+	grid-area: 7 / 13 / 7 / 13;
+}
+
+#Tl {
+	grid-area: 7 / 14 / 7 / 14;
+}
+
+#Pb {
+	grid-area: 7 / 15 / 7 / 15;
+}
+
+#Bi {
+	grid-area: 7 / 16 / 7 / 16;
+}
+
+#Po {
+	grid-area: 7 / 17 / 7 / 17;
+}
+
+#At {
+	grid-area: 7 / 18 / 7 / 18;
+}
+
+#Rn {
+	grid-area: 8 / 19 / 7 / 19;
+}
+
+#Fr {
+	grid-area: 8 / 2 / 8 / 2;
+}
+
+#Ra {
+	grid-area: 8 / 3 / 8 / 3;
+}
+
+#Ac {
+	grid-area: 10 / 4 / 10 / 4;
+}
+
+#Th {
+	grid-area: 10 / 5 / 10 / 5;
+}
+
+#Pa {
+	grid-area: 10 / 6 / 10 / 6;
+}
+
+#U {
+	grid-area: 10 / 7 / 10 / 7;
+}
+
+#Np {
+	grid-area: 10 / 8 / 10 / 8;
+}
+
+#Pu {
+	grid-area: 10 / 9 / 10 / 9;
+}
+
+#Am {
+	grid-area: 10 / 10 / 10 / 10;
+}
+
+#Cm {
+	grid-area: 10 / 11 / 10 / 11;
+}
+
+#Bk {
+	grid-area: 10 / 12 / 10 / 12;
+}
+
+#Cf {
+	grid-area: 10 / 13 / 10 / 13;
+}
+
+#Es {
+	grid-area: 10 / 14 / 10 / 14;
+}
+
+#Fm {
+	grid-area: 10 / 15 / 10 / 15;
+}
+
+#Md {
+	grid-area: 10 / 16 / 10 / 16;
+}
+
+#No {
+	grid-area: 10 / 17 / 10 / 17;
+}
+
+#Lr {
+	grid-area: 8 / 4 / 8 / 4;
+}
+
+#Rf {
+	grid-area: 8 / 5 / 8 / 5;
+}
+
+#Db {
+	grid-area: 8 / 6 / 8 / 6;
+}
+
+#Sg {
+	grid-area: 8 / 7 / 8 / 7;
+}
+
+#Bh {
+	grid-area: 8 / 8 / 8 / 8;
+}
+
+#Hs {
+	grid-area: 8 / 9 / 8 / 9;
+}
+
+#Mt {
+	grid-area: 8 / 10 / 8 / 10;
+}
+
+#Ds {
+	grid-area: 8 / 11 / 8 / 11;
+}
+
+#Rg {
+	grid-area: 8 / 12 / 8 / 12;
+}
+
+#Cn {
+	grid-area: 8 / 13 / 8 / 13;
+}
+
+#Uut {
+	grid-area: 8 / 14 / 8 / 14;
+}
+
+#Fl {
+	grid-area: 8 / 15 / 8 / 15;
+}
+
+#Uup {
+	grid-area: 8 / 16 / 8 / 16;
+}
+
+#Lv {
+	grid-area: 8 / 17 / 8 / 17;
+}
+
+#Uus {
+	grid-area: 8 / 18 / 8 / 18;
+}
+
+#Uuo {
+	grid-area: 8 / 19 / 8 / 19;
+}

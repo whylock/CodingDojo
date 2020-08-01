@@ -1,0 +1,205 @@
+/* * {
+	outline: 1px solid black;
+} */
+
+.container {
+	width: 970px;
+	height: 1000px;
+	margin: 0px auto;
+	background: #235076;
+}
+
+/* start of .txt (header) Python Logo and search bar styling */
+
+.txt {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.txt a {
+	color: orange;
+}
+
+.txt .s-1 {
+	color: white;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+header img {
+	width: 300px;
+	margin-left: 30px;
+}
+
+.sForm {
+	background-color: #444444;
+	padding: 20px 40px 20px 40px;
+	border-radius: 10px;
+	margin: 10px 20px 10px 20px;
+}
+
+.sForm input {
+	text-align: center;
+	border: 2px solid gray;
+	width: 175px;
+	padding: 10px;
+	margin: 0px;
+}
+
+.sForm button {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #235076;
+	color: white;
+}
+
+/* end of .txt styling */
+/* =========================== */
+/* start of .top (navbar) styling */
+
+nav {
+	width: 700px;
+	margin: 0 auto;
+}
+
+nav ul {
+	background-color: #437dad;
+	box-shadow: 2px 2px 5px 0px black;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+ul li {
+	align-self: center;
+	list-style-type: none;
+	margin: 10px 20px 10px 10px;
+	color: white;
+	font-size: 20px;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+}
+
+.links {
+	display: inline-block;
+	margin: 0px 0px 0px 50px;
+}
+
+.links ul {
+	width: 300px;
+	text-align: center;
+}
+
+.links ul a {
+	color: white;
+}
+.links ul li {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+/* end of .top styling */
+/* ===================== */
+/* start of .contentBlk (top content) styling */
+
+.contentBlk {
+	text-align: center;
+	margin-right: 50px;
+}
+
+.contentBlk p:first-child {
+	color: white;
+}
+
+.contentBlk p:nth-child(2) {
+	color: gold;
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.contentBlk span {
+	display: block;
+	padding: 5px;
+}
+
+.contentBlk p:last-child {
+	font-size: 17px;
+	color: white;
+}
+
+/* end of .contentBlk styling */
+/* =============================== */
+/* start of .middle (middle content styling) */
+
+.middle {
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	height: fit-content;
+}
+
+.middle hr {
+	background-color: blueviolet;
+	margin-top: 10px;
+	width: 45s0px;
+	height: 4px;
+}
+
+.middle a {
+	text-decoration: none;
+	color: #437dad;
+}
+
+.middle ul li {
+	color: black;
+	list-style-type: square;
+	list-style-position: initial;
+}
+
+.mleft {
+	height: fit-content;
+	text-align: center;
+	width: 400px;
+}
+.mright {
+	height: fit-content;
+	text-align: center;
+	width: 400px;
+}
+
+/* end of .middle styling */
+/* ========================== */
+/* start of .bottom (bottom of page) styling */
+
+.bottom {
+	display: flex;
+	justify-content: center;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 120px;
+}
+
+.bottom a {
+	color: #84b6e2;
+	text-decoration: none;
+	margin: 0px 10px 0px 10px;
+	padding: 0 75px 20px 75px;
+}
+
+.bottom span {
+	font-size: x-small;
+	text-align: center;
+}
+
+.copyright {
+	color: #84b6e2;
+	font-size: xx-small;
+	text-align: center;
+	padding: 0px 0px 0px 20px;
+}
