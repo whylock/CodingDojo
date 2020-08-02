@@ -1,0 +1,28 @@
+.container {
+	padding: 40px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#pictures {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+img {
+	width: 250px;
+	height: 300px;
+}
+
+.header,
+h1 {
+	text-align: center;
+}
+
+h1 {
+	padding: 20px;
+}
+
+.header input {
+	font-size: 15px;
+}
