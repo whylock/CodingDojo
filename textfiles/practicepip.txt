@@ -1,0 +1,26 @@
+Run these commands in the order instructed. Your assignment submission should be a .txt file that includes a short explanation of what you were able to learn about each command by doing a brief (1-2 min) web search for each term. If it is relevant, include the output of your command and your understanding of what it means. It is important to always read your terminal output and try to understand it.
+
+Reminder: when your virtualenv is activated, you may use the pip command. If not, use pip3.
+
+Run the following commands:
+
+pip list - list all the installed packages
+
+deactivate (This will deactivate your virtual environment) - deactive my virtual env
+
+pip3 list (How is the result different from when you ran pip list with the virtualenv activated? Hint, you should not have as many things listed when the virtualenv is deactivated. If your results are the same, go back and figure out what went wrong.) - less things listed
+
+source myEnvironments/py3Env/bin/activate (Adjust the path as needed to re-activate the virtualenv; for windows call myEnvironments/py3Env/Scripts/activate) - reactivate the virtual environment
+
+pip install Django==2.2.4 (What information do you see returned in terminal after this command?) - install this version of Djanjo
+
+pip freeze (What's the difference between freeze and list?) shows packages I install via pip
+
+
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file? a list of packages I installed
+
+pip uninstall Django - uninstall Django
+
+pip show Django - show if Django is installed
+
+pip search Flask This one might take a moment to execute. - search for all the Flask packages

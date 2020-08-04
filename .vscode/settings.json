@@ -8,5 +8,6 @@
         "plaintext",
         "html",
         "css"
-    ]
+    ],
+    "python.pythonPath": "/Users/shawn/opt/anaconda3/bin/python"
 }
