@@ -58,17 +58,17 @@ function generateCoinChange(n) {
 	return `Dollar: ${dollar}, Half Dollars ${halfDollar}, Quarters: ${quarter}, Dimes ${dime}, Nickels: ${nickel}, Pennies ${penny}`;
 }
 
-generateCoinChange(350);
+generateCoinChange(394);
 
 function gCC(n) {
-	console.log(dollar);
-	var dollar = Math.floor(n / 100);
-	console.log(dollar);
-	n -= 100 * dollar;
-	console.log(dollar);
-	var halfDollar = Math.floor(n / 50);
-	console.log(halfDollar);
-	n -= 25 * halfDollar;
+	// console.log(dollar);
+	// var dollar = Math.floor(n / 100);
+	// console.log(dollar);
+	// n -= 100 * dollar;
+	// console.log(dollar);
+	// var halfDollar = Math.floor(n / 50);
+	// console.log(halfDollar);
+	// n -= 25 * halfDollar;
 	var quarter = Math.floor(n / 25);
 	console.log(quarter);
 	n -= 25 * quarter;

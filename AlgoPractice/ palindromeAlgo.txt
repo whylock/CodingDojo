@@ -1,0 +1,10 @@
+function palindrome(str){
+	var letterCount = str.length
+	if(letterCount <= 1){
+		return true
+	}
+	if (str[0]) === str[letterCount-1] {
+	return palindrome(str.slice(1,letterCount -1));
+	}
+	return false
+}
