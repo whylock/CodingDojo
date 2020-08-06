@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="chessboard">
+{% for y in range(0,chessY) %}
+    <div class="row">
+        {% for x in range(0,chessX): %}
+            {% if x % 2 == 0 %}
+                <div class="colorbox1" style="background-color: {{color1}};"></div>
+            {% else %}
+                <div class="colorbox2" style="background-color: {{color2}};"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>

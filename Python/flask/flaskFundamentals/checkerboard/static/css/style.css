@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 1070px;
+    height: 1000px;
+
+    background-color: yellow;
+}
+
+.chessboard {
+    width: 500px;
+    height: 500px;
+}
+
+
+.row {
+    margin: 0;
+    display: block;
+}
+
+
+div .colorbox1 {
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    /* background-color: {{color1}}; */
+}
+
+div .colorbox2 {
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: {{color2}};
+}
