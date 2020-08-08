@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Display</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+    
+    <p>The current time and date:</p>
+
+    <div class="time">
+        <h1> {{ mdy }} </h1>
+        <h1> {{ time }}</h1>
+    </div>
+    
+    </div>
+</body>
+</html>

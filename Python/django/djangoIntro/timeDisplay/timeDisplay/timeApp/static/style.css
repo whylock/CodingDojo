@@ -1,0 +1,20 @@
+body {
+    width: 1000px;
+}
+
+.container{
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    margin: 20px auto;
+    width: 200px;
+    border: 3px solid black;
+}
+
+.time {
+    margin: 20px auto;
+    width: 400px;
+    border: 3px solid black;
+}
