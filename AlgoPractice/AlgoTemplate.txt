@@ -1,7 +1,14 @@
-// 1 -- Understand the problem
-// 2 -- Think of examples
-// 3 -- Break it down
-// 4 -- solve or simplify
-// 5 -- refactor
+# // 1 -- Understand the problem
+# // 2 -- Think of examples
+# // 3 -- Break it down
+# // 4 -- solve or simplify
+# // 5 -- refactor
 
 
+def coinChange(amount):
+    coins = {
+        'quarter': 0;
+    }
+
+
+print(coins['quarter']++)

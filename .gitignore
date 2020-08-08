@@ -54,7 +54,7 @@ parts/
 sdist/
 var/
 wheels/
-py3Env/
+Python/myEnviroments/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
