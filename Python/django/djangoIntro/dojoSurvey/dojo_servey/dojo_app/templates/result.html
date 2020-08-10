@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Submitted Info</h1>
+        <p>Name: {{ name }}</p>
+        <p>Dojo Location: {{ location}}</p>
+        <p>Favorite Lanuage: {{ favlang}}</p>
+        <p>Checkbox: {{ check }}</p>
+        <p>Radio: {{ radio }}</p>
+        <p>Comment: {{ comment }}</p>
+    </div>
+</body>
+</html>
