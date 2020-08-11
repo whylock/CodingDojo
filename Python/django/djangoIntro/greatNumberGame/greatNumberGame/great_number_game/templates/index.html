@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100.</h3>
+        <h4>Take a guess!</h4>
+        {% if request.session.alert == 'Correct' %}
+            <h1>Wow! Nice guess. Submit your name to the leaderboard using the form below!</h1>
+            <p>You took {{ request.session.tries }} tries to guess correctly</p>
+        {% else %}
+            <p>You're on guess: {{ request.session.tries }}</p>
+        {% endif %}
+
+        {% if request.session.alert == 'Too High' %} 
+    <div class="red col-4 offset-4">
+        {{ request.session.alert }}
+        {% if request.session.tries == 5 %}
+            <form action="/reset" method="POST">
+            {% csrf_token %}
+            <p>You lose!</p>
+            <button class='btn btn-danger' type="submit">Play again?</button>
+        {% endif %}
+        {% endif %}
+    </div>
+        {% if request.session.alert == 'Too Low' %} 
+    <div class="red col-4 offset-4">
+                {{ request.session.alert }}
+        {% if request.session.tries == 5 %}
+                <form action="/reset" method="POST">
+                {% csrf_token %}
+                <p>You Lose!</p>
+                <button class='btn btn-danger' type="submit">Play again?</button>
+        {% endif %}
+        {% endif %}
+    </div>
+    
+    {% if request.session.alert == 'Correct' %} 
+    <div class="green col-4 offset-4">
+        {{ request.session.alert }}
+        <form action="/reset" method="POST">
+        {% csrf_token %}
+        <button class='btn btn-primary' type="submit">Play again?</button>
+    </form>
+        <form action="/leaderboard" method="POST">
+    {% csrf_token %}
+        <input type="text" class="form-control col-6 offset-3" placeholder="Submit Your Name" name="leaderboard" id="leaderboard">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+    </div>
+    {% endif %}
+
+
+    {% if request.session.alert != 'Correct'%}
+    <div class="form-group">
+    <form action="/guess" method="POST">
+    {% csrf_token %}
+        <input type="text" class="form-control col-2 offset-5" placeholder="Enter Your Guess!" name="guess" id="guess">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+    {% endif %}
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+	background: pinkS;
+	text-align: center;
+}
+
+h1 {
+	margin: 30px auto;
+}
+
+h3,
+h4 {
+	font-weight: normal;
+	margin: 15px auto;
+}
+
+input {
+	margin-top: 40px;
+}
+
+.red {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 250px;
+	border-radius: 5px;
+	color: whitesmoke;
+	background-color: red;
+}
+
+.green {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 250px;
+	border-radius: 5px;
+	color: whitesmoke;
+	background-color: green;
+}
+
+li {
+	font-size: large;
+	text-align: justify;
+}
