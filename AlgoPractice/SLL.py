@@ -52,6 +52,15 @@ class SLL:
             self.head = newNode
         return self
 
+    def removeLast(self):
+        runner = self.head
+        while runner.next is not None:
+            if runner.next.next is None:
+                runner.next = None
+                return self
+            else:
+                runner = runner.next
+
 
 newSll = SLL()
-newSll.addFront(10).addFront(10).addFront(10).addFront(10).addFront(10).addFront(10).display()
+newSll.addFront(10).addFront(10).addFront(10).addFront(10).addFront(10).addFront(10).display().removeBack().display()
