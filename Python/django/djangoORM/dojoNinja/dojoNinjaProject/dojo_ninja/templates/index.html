@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<title>Dojo & Ninja</title>
+	</head>
+	<body>
+		<div class="mt-5 w-100 container">
+			<div class="top w-75 mx-auto d-flex justify-content-around">
+				<div class="">
+					<h1 class="d-inline-block">Add a Dojo</h1>
+					<form class="d-flex" action="/dojo_create" method="POST">
+					{% csrf_token %}
+						<div class="form-group">
+							<input id="name" placeholder="Name" class="form-control" type="text" name="name" />
+							<input id="city" placeholder="City" class="form-control" type="text" name="city" />
+							<input id="state" placeholder="State" class="form-control" type="text" name="state" />
+							<button class="btn btn-light btn-outline-dark btn-block mt-2" type="submit">Add</button>
+						</div>
+					</form>
+				</div>
+				<div class="">
+					<h1 class="d-inline-block">Add a Ninja</h1>
+					<form class="d-flex" action="/ninja_create" method="POST">
+					{% csrf_token %}
+						<div class="form-group">
+							<input id="firstname" placeholder="First Name" class="form-control" type="text" name="first_name" />
+							<input id="lastname" placeholder="Last Name" class="form-control" type="text" name="last_name" />
+							<select name="dojo" class="form-control" id="dojo">
+								<option value="place">-select a dojo-</option>
+                                {% for d in dojo %}
+								<option value="{{d.id}}">{{ d.name }}</option>
+                                {% endfor %}
+							</select>
+							<button class="btn btn-light btn-outline-dark btn-block mt-2" type="submit">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<hr class="bg-dark" />
+			<div class="bottom w-25 text-center mx-auto">
+                <h1>All the Dojos</h1>
+                <ul>
+                    {% for info in dojo %}
+                        <li>Ninjas at the {{ info.name }} Dojo
+							<ul>
+							{% for info in ninja %}
+								<li>{{ info.first_name}} {{ info.last_name }}</li>
+							{% endfor %}
+							</ul>
+						</li>
+                    {% endfor %}
+                </ul>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	</body>
+</html>

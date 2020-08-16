@@ -1,0 +1,47 @@
+{% comment %} 
+
+Run the shell and import your models
+
+from dojo_ninja.models import *
+
+Create 3 new dojos
+
+Dojo.objects.create(name = '', city = '', state = '') repeat 3x
+
+Delete the 3 dojos you just created
+
+Dojo.objects.all().delete()
+
+Create 3 more dojos
+
+Dojo.objects.create(name = '', city = '', state = '') repeat 3x
+
+Create 3 ninjas that belong to the first dojo
+
+ninja = Ninja.objects.create(dojo = name_dojo, first_name = '', last_name = '') repeat 3x n 
+
+Create 3 ninjas that belong to the second dojo
+
+same as above
+
+Create 3 ninjas that belong to the third dojo
+
+same as above
+
+retrieve all the ninja from the first dojo
+
+first_dojo.ninja.all()
+
+all the ninja form the last dojo
+
+third_dojo.ninja.all()
+
+the last ninja's dojo
+
+third_dojo.ninja.get(id=9)
+        
+create a new dojo
+
+Dojo.objects.create(name = '', city = '', state = '', desc = '')
+
+ {% endcomment %}
