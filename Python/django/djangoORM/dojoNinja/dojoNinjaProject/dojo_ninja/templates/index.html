@@ -47,8 +47,8 @@
                     {% for info in dojo %}
                         <li>Ninjas at the {{ info.name }} Dojo
 							<ul>
-							{% for info in ninja %}
-								<li>{{ info.first_name}} {{ info.last_name }}</li>
+							{% for name in info.ninja.all %}
+								<li>{{ name.first_name}} {{ name.last_name }}</li>
 							{% endfor %}
 							</ul>
 						</li>

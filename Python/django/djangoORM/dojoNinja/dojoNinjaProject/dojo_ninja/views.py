@@ -5,12 +5,10 @@ from .models import Dojo, Ninja
 
 
 def root(request):
-    all_dojos = Dojo.objects.all()
-    all_ninjas = Ninja.objects.all()
+    all_dojos = Dojo.objects.all(),
 
     context = {
         "dojo": all_dojos,
-        "ninja": all_ninjas,
     }
 
     return render(request, 'index.html', context)
@@ -20,7 +18,8 @@ def dojoCreate(request):
     Dojo.objects.create(
         name=request.POST['name'],
         city=request.POST['city'],
-        state=request.POST['state'],)
+        state=request.POST['state'],
+    )
     return redirect('/')
 
 
@@ -28,6 +27,6 @@ def ninjaCreate(request):
     Ninja.objects.create(
         first_name=request.POST['first_name'],
         last_name=request.POST['last_name'],
-        dojo=Dojo.objects.get(id=1)
+        dojo=Dojo.objects.get(id=request.POST['dojo']),
     )
     return redirect('/')
