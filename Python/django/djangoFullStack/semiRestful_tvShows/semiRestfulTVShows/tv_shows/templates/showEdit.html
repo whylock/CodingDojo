@@ -13,10 +13,17 @@
 	<body>
 		<div class="container w-50">
 			<div class="top d-flex justify-content-between">
-				<h1>Add a New Show</h1>
+				<h1>Edit Show {{ selected_show.id}}</h1>
 				<a href="{% url 'shows' %}">Go back</a>
 			</div>
-			<form class="w-75" action='/shows/create' method='post'>
+			<form class="w-75" action='/shows/{{selected_show.id}}/update' method='post'>
+			{% if messages %}
+				<ul class="messages">    
+    				{% for message in messages %}    
+        				<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    				{% endfor %}
+				</ul>
+			{% endif %}
                 {% csrf_token %}
 				<div class="form-group">
 					<label for="title">Title</label>
@@ -37,7 +44,8 @@
 					<textarea name="desc" class="form-control" id="desc" cols="30" rows="5"></textarea>
 				</div>
 				<button type="submit" class="btn btn-primary btn-block w-25 mx-auto">Create</button>
-			</form>
+                <a href="/shows/{{selected_show.id}}" class="d-block text-center mt-2">Go to Show</a>
+            </form>
 		</div>
 
 		<!-- Optional JavaScript -->
