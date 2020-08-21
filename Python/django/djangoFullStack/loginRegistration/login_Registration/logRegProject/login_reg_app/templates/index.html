@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login & Registration</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container w-100 d-flex justify-content-between">
+			<div class="registration w-25 mt-5">
+				<form action="/register" class="" method="post">
+					{% csrf_token %}
+					<h1 class="text-center">Registration</h1>
+						<ul>
+							{% for m in messages %}
+								<li>
+									{{m}}
+								</li>
+							{% endfor %}
+						</ul>
+					<div class="form-group">
+						<label for="fname">First name:</label>
+						<input id="fname" class="form-control" type="text" name="fname" />
+					</div>
+					<div class="form-group">
+						<label for="lname">Last name:</label>
+						<input id="lname" class="form-control" type="text" name="lname" />
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input id="email" class="form-control" type="email" name="email" />
+					</div>
+					<div class="form-group">
+						<label for="pw">Password:</label>
+						<input id="pw" class="form-control" type="password" name="pw" />
+					</div>
+					<div class="form-group">
+						<label for="confirmPW">Confirm:</label>
+						<input id="confirmPW" class="form-control" type="password" name="cPW" />
+					</div>
+					<button type="submit" class="btn btn-light btn-outline-dark btn-block w-50 mx-auto">Register</button>
+				</form>
+			</div>
+			<div class="login w-25 mt-5">
+				<form action="/login" class="" method="post">
+					{% csrf_token %}
+					<h1 class="text-center">Login</h1>
+					<div class="form-group">
+						<ul>
+							{% for m in messages %}
+								<li>
+									{{m}}
+								</li>
+							{% endfor %}
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input id="email" class="form-control" type="email" name="email" />
+					</div>
+					<div class="form-group">
+						<label for="pw">Password:</label>
+						<input id="pw" class="form-control" type="password" name="pw" />
+					</div>
+					<button type="submit" class="btn btn-light btn-outline-dark btn-block w-50 mx-auto">Login</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+{
+	"email_regex": {
+		"prefix": "email_regex",
+		"body": ["EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z]+$')", "if not EMAIL_REGEX.match(postData['email']):", "    errors['emailMatch'] = 'Please enter a valid email address!'"],
+		"description": "email_regex"
+	}
+}
