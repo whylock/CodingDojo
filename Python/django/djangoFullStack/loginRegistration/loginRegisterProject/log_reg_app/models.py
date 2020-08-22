@@ -1,4 +1,5 @@
 from django.db import models
+import bcrypt
 import re
 
 # Create your models here.
@@ -7,7 +8,21 @@ import re
 class UserManager(models.Manager):
     def loginValidator(self, postData):
         print('IN LOGIN VALIDATOR')
-        return self
+        valid = {
+            'error': {}
+        }
+        user = self.filter(email=postData["email"])
+        if len(postData['email']) == 0:
+            valid['error']['errorEmail'] = 'Please fill in your email'
+        if len(postData['pw']) == 0:
+            valid['error']['errorPW'] = 'Please fill in your password'
+        if user:
+            user_found = user[0]
+            if not bcrypt.checkpw(postData["pw"].encode(), user_found.password.encode()):
+                valid['error']["loginPW"] = "Password is incorrect"
+            else:
+                valid["user"] = user_found
+        return valid
 
     def regValidator(self, postData):
         errors = {}
@@ -22,8 +37,8 @@ class UserManager(models.Manager):
             errors['emailMatch'] = 'Please enter a valid email address!'
         if len(postData['pw']) <= 0:
             errors['pwReq'] = 'Password field is required'
-        elif len(postData['pw'] < 4):
-            errors['pwlen'] = 'Password must be between 4 and 50 characters'
+            if len(postData['pw']) < 4:
+                errors['pwlen'] = 'Password must be between 4 and 50 characters'
         if postData['pw'] != postData['cPW']:
             errors['confirmPW'] = 'Password does not match'
         return errors

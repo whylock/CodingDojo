@@ -38,7 +38,7 @@ class Queue:
         while runner is not None:
             count += 1
             runner = runner.next
-        print(count)
+        # print(count)
         return count
 
     def display(self):
@@ -94,7 +94,7 @@ class Stack:
         while runner is not None:
             count += 1
             runner = runner.next
-        print(count)
+        # print(count)
         return count
 
     def display(self):
@@ -116,31 +116,63 @@ ExcerptFrom: MartinPuryear. “ AlgorithmChallenges: E - book for DojoStudents. 
 '''
 
 
-q1 = Queue()
+'''
+“Given a Stack, create a new second Stack and copy values from first Stack into second Stack,
+so they pop in same order. Use only one Queue for additional storage”
 
-q1.enqueue('h').enqueue('a').enqueue('n').enqueue('n').enqueue('a').enqueue('h')
+Excerpt From: Martin Puryear. “Algorithm Challenges: E-book for Dojo Students.” iBooks.
+'''
+s1 = Stack()
+s1.push(5).push(6).push(7).push(8)
 
 
-def palindrome(queueInput):
+def copyStack(stackInput):
     stk = Stack()
-    length = queueInput.size()
+    print('-' * 40)
+    stackInput.display()
+    print('-' * 40)
+    q2 = Queue()
+    length = stackInput.size()
     for i in range(length):
-        t = queueInput.dequeue()
-        queueInput.enqueue(t)
+        t = stackInput.pop()
         stk.push(t)
+    #     q2.enqueue(stk.pop())
     # print('-' * 40)
-    # stk.display()
-    # queueInput.display()
+    # q2.display()
     # print('-' * 40)
-    rnr = queueInput.head
-    rnr2 = stk.top
-    while rnr is not None:
-        if rnr.value is not rnr2.value:
-            print(False)
-            return False
-        rnr = rnr.next
-        rnr2 = rnr2.next
-    print(True)
+    # length2 = q2.size()
+    # for j in range(length2):
+    #     stk.push(q2.dequeue())
+    print('-' * 40)
+    stk.display()
+    print('-' * 40)
 
 
-palindrome(q1)
+copyStack(s1)
+
+
+# q1 = Queue()
+
+# q1.enqueue('h').enqueue('a').enqueue('n').enqueue('n').enqueue('a').enqueue('h')
+
+
+# def palindrome(queueInput):
+#     stk = Stack()
+#     length = queueInput.size()
+#     for i in range(length):
+#         t = queueInput.dequeue()
+#         queueInput.enqueue(t)
+#         stk.push(t)
+#     # print('-' * 40)
+#     # stk.display()
+#     # queueInput.display()
+#     # print('-' * 40)
+#     rnr = queueInput.head
+#     rnr2 = stk.top
+#     while rnr is not None:
+#         if rnr.value is not rnr2.value:
+#             print(False)
+#             return False
+#         rnr = rnr.next
+#         rnr2 = rnr2.next
+#     print(True)

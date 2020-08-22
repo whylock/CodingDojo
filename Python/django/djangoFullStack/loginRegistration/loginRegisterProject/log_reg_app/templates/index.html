@@ -13,13 +13,6 @@
 				<form action="/register" class="" method="post">
 					{% csrf_token %}
 					<h1 class="text-center">Registration</h1>
-						<ul>
-							{% for m in messages %}
-								<li>
-									{{m}}
-								</li>
-							{% endfor %}
-						</ul>
 					<div class="form-group">
 						<label for="fname">First name:</label>
 						<input id="fname" class="form-control" type="text" name="fname" />
@@ -43,17 +36,23 @@
 					<button type="submit" class="btn btn-light btn-outline-dark btn-block w-50 mx-auto">Register</button>
 				</form>
 			</div>
+
+			<div>
+				<ul>
+				{% for m in messages %}
+					<li>
+						{{m}}
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+
 			<div class="login w-25 mt-5">
 				<form action="/login" class="" method="post">
 					{% csrf_token %}
 					<h1 class="text-center">Login</h1>
 					<div class="form-group">
 						<ul>
-							{% for m in messages %}
-								<li>
-									{{m}}
-								</li>
-							{% endfor %}
 					<div class="form-group">
 						<label for="email">Email:</label>
 						<input id="email" class="form-control" type="email" name="email" />
