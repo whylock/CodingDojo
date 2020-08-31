@@ -40,6 +40,9 @@ __pycache__/
 # C extensions
 *.so
 
+### FOLDERS ###
+exam/
+
 # Distribution / packaging
 .Python
 build/
