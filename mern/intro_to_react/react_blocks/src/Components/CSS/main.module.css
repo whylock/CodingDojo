@@ -1,0 +1,8 @@
+.main {
+	display: inline-block;
+	vertical-align: top;
+	background-color: #e16666;
+	width: 1000px;
+	height: 600px;
+	margin: 10px 10px 10px 0px;
+}
