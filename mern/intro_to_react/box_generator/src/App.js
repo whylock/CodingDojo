@@ -12,7 +12,7 @@ function App() {
 		e.preventDefault();
 		const newBox = { color: color, size: size };
 		setBoxes([...box, newBox]);
-		setColor("");
+		setColor("red");
 		setSize("20");
 	};
 
@@ -29,12 +29,9 @@ function App() {
 						<input type="text" value={size} className="form-control" onChange={(e) => setSize(e.target.value)} />
 					</div>
 					<input type="submit" value="Create Box" className="w-25 mx-auto btn btn-outline-dark btn-block" />
-					<button className="w-25 mx-auto btn btn-outline-dark btn-block" onClick={() => setBoxes([])}>
-						Clear
-					</button>
 				</div>
 			</form>
-			<div className="w-100 d-flex flex-wrap">
+			<div className="mt-5 jumbotron w-100 d-flex flex-wrap">
 				{box.map((box, i) => (
 					<div
 						key={i}
@@ -43,12 +40,13 @@ function App() {
 							width: box.size + "px",
 							height: box.size + "px",
 							margin: "10px",
-							display: "flex",
-							flexWrap: "wrap",
 						}}
 					></div>
 				))}
 			</div>
+			<button className="w-25 mx-auto btn btn-outline-dark btn-block" onClick={() => setBoxes([])}>
+				Clear
+			</button>
 		</div>
 	);
 }
