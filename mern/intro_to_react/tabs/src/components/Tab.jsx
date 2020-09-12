@@ -3,8 +3,9 @@ import Button from "./Button";
 
 const Tab = (props) => {
 	const [state, setState] = useState({
-		currentTab: 1,
+		currentTab: 0,
 	});
+
 	const onTabClick = (e, value) => {
 		setState({
 			currentTab: value,
@@ -18,7 +19,7 @@ const Tab = (props) => {
 					{v}
 				</Button>
 			))}
-			<p>Tab {state.currentTab} is open!</p>
+			{state.currentTab === 0 ? "" : <p>Tab {state.currentTab} is open!</p>}
 		</div>
 	);
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
 	padding: 15px 20px;
-	border-radius: 6px;
+	border-radius: px;
 	border: 1px solid black;
 	background-color: ${(props) => (props.selected ? "blue" : "white")};
 	font-size: 1rem;

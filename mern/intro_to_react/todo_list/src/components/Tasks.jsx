@@ -29,7 +29,7 @@ const Task = (props) => {
 			<div className="jumbotron">
 				<h1>TODO LIST</h1>
 			</div>
-			<div cla ssName="content d-flex">
+			<div className="content d-flex">
 				<form onSubmit={handleSubmit} className="text-left">
 					<label htmlFor="addTask">Add a Task:</label>
 					<input type="text" name="addTask" className="form-control" onChange={(e) => setText(e.target.value)} />
