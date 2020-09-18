@@ -10,7 +10,7 @@ const Show = (props) => {
             Axios.get('http://localhost:8000/api/product')
                 .then(res => setProducts(res.data.results))
                 .catch(err => setProducts(err));
-        },[])
+    }, [])
     
     return (
         <div>
@@ -27,9 +27,10 @@ const Show = (props) => {
                     {
                         product.map((p, i) => {
                         return <tr key={i}>
-                                    <td><Link to={`/api/product/${p._id}`}>{p.title}</Link></td>
+                                    <td><Link to={`/product/${p._id}`}>{p.title}</Link></td>
                                     <td>{p.price}</td>
                                     <td>{p.desc}</td>
+
                                 </tr>
                         })
                     }

@@ -5,7 +5,6 @@ const ProductForm = (props) => {
     const {inputs, errors, handleChange, handleSubmit, submitValue} = props
     return (
         <div className='col-4 mx-auto'>
-                <h1 className='text-center'>Product Manager</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="title">Title</label>

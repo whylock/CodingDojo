@@ -1,27 +1,26 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import Axios from 'axios'
 import ProductForm from '../components/ProductForm'
-import Show from '../components/DisplayAll'
 import { navigate } from '@reach/router'
 
-const Main = (props) => {
-    const initialProduct = {
-        title: "",
-        price: "",
-        desc:""
-    }
+const Update = (props) => {
+
     const initialErrors = {
         title: "",
         price: "",
         desc:""
     }
-    const [product, setProducts] = useState(initialProduct)
+    const [edit, setEdit] = useState({
+        title: "",
+        price: 0,
+        desc: ""
+    })
 
     const [errors, setErrors] = useState(initialErrors)
 
     const handleChange = (e) => {
-        setProducts({
-            ...product,
+        setEdit({
+            ...edit,
             [e.target.name]:e.target.value
         })
     }
@@ -29,33 +28,36 @@ const Main = (props) => {
     const handleSubmit = (e) => {
         setErrors(initialErrors)
         e.preventDefault()
-        Axios.post('http://localhost:8000/api/product/create', product)
+        Axios.put(`http://localhost:8000/api/product/update/${edit._id}`, edit)
             .then(res => {
                 if (res.data.result) {
                     navigate('/')
-                } else {
+                }
+                else {
                     setErrors(res.data)
                 }
             })
-            .then(res => setProducts(initialProduct))
             .catch(err => console.log(err))
     }
     
+    useEffect(() => {
+        Axios.get(`http://localhost:8000/api/product/${props.id}`)
+        .then(res => setEdit(res.data.results))
+        .catch(err => setEdit(err));        
+    }, [props])
 
     return (
         <div>
-            <h1 className='text-center'>ADD A PRODUCT</h1>
+            <h1 className='text-center'>Edit Product</h1>
             <ProductForm
-                inputs={product}
+                inputs={edit}
                 errors={errors}
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
-                submitValue = "Create"
+                submitValue = "EDIT"
             />
-            <hr />
-            <Show product={product}/>
         </div>
     )
 }
 
-export default Main
+export default Update
