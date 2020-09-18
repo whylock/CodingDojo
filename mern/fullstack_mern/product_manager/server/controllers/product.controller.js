@@ -5,8 +5,9 @@ const product = require("../models/product.model");
 
 module.exports = {
     index: (req, res) => {
+        console.log("in the controller")
         product.find()
-            .then(data => res.json({results:data }))
+            .then(data => res.json({ results:data }))
             .catch(err => res.json(err.errors))
     },
     create: (req, res) => {

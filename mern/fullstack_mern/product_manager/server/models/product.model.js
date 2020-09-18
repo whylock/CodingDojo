@@ -4,7 +4,7 @@ const mongoose = require('mongoose'); // Erase if already required
 var productSchema = new mongoose.Schema({
     title: {
         type: String,
-        require: [true, "Title must be at least 5 characters."]
+        required: [true, "Title must be at least 5 characters."]
     },
     price: {
         type: Number,

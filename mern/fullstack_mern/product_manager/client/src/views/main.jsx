@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import Axios from 'axios'
 import ProductForm from '../components/ProductForm'
+import Show from '../components/DisplayAll'
 import { navigate } from '@reach/router'
 
 const Main = (props) => {
     const initialProduct = {
         title: "",
-        price: 0,
+        price: "",
+        desc:""
+    }
+    const initialErrors = {
+        title: "",
+        price: "",
         desc:""
     }
     const [product, setProducts] = useState(initialProduct)
 
-    const [errors, setErrors] = useState(initialProduct)
+    const [errors, setErrors] = useState(initialErrors)
 
-    useEffect(() => {
-      return () => {
-          Axios.get('http://localhost:8000/api/products')
-            .then(res => setProducts(res.data))
-            .catch(err => setProducts(err))
-      }
-    }, [])
-    
     const handleChange = (e) => {
         setProducts({
             ...product,
@@ -28,16 +26,18 @@ const Main = (props) => {
         })
     }
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
+        setErrors(initialErrors)
         e.preventDefault()
-        Axios.get('http://localhost:8000/api/products/create/product', product)
+        Axios.post('http://localhost:8000/api/product/create', product)
             .then(res => {
-                if (res.data.results) {
+                if (res.data.result) {
                     navigate('/')
                 } else {
                     setErrors(res.data)
                 }
             })
+            .then(res => setProducts(initialProduct))
             .catch(err => console.log(err))
     }
     
@@ -48,8 +48,11 @@ const Main = (props) => {
                 inputs={product}
                 errors={errors}
                 handleChange={handleChange}
-                handleSumbit={handleSumbit}
+                handleSubmit={handleSubmit}
+                submitValue = "Create"
             />
+            <hr />
+            <Show product={product}/>
         </div>
     )
 }
