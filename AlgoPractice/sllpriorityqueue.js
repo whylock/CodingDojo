@@ -57,14 +57,26 @@ class SLLPriority{
         }
         return this
     }
+
+    dequeue() {
+        var runner = this.head
+        while (runner.next.next !== null) {
+            runner = runner.next
+        }
+        if (runner.next.next === null) {
+            runner.next = null
+        }
+        return this
+    }
 }
 
 
 var queue = new SLLPriority()
 console.log(queue)
-queue.enqueue(10, 2)
-queue.enqueue(5, 1)
-queue.enqueue(7, 5)
-// console.log(queue)
+queue.enqueue(10, 2)    // runner    
+queue.enqueue(5, 1)     // runner.next
+queue.enqueue(6, 4)     // runner.next.next
+queue.enqueue(4, 3)     // runner.next.next.next
+queue.enqueue(7, 5)     // runner.next.next.next.next
 queue.print()
-queue.print()
+queue.dequeue().print()
