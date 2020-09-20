@@ -44,7 +44,8 @@ __pycache__/
 exam/
 mern-lectures/
 mern/clone
-Mern/exam
+mern/exam
+mern/project
 
 # Distribution / packaging
 .Python
