@@ -6,12 +6,23 @@ const express = require('express'),
     server = app.listen(port, () => console.log(`Listening on port ${port}`)),
     io = require('socket.io')(server)
 
-io.on('connection', socket => {
-    console.log(socket.id)
-    console.log("Nice to meet you. (shake hand)")
-    socket.emit("Welcome")
+io.on('connection', (socket) => {
+    socket.on('register', handleRegister)
+    socket.on('join',handleJoin)
+    socket.on('leave',handleLeave)
+    socket.on('message',handleMessage)
+    socket.on('chat',handleGetChat)
+    socket.on('users', handleGetUsers)
+    socket.on('disconnect', () => {
+        console.log(`User Disconnected, ${socket.id}`, socket.id)
+        handleDisconnect()
+    })
+    socket.on('error', () => {
+        console.log('Error from client', socket.id)
+        console.log(err)
+    })
 })
-    
+
 
 
 app.use(cors());
