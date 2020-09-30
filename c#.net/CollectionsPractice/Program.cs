@@ -41,7 +41,7 @@ namespace CollectionsPractice
             Random rand = new Random();
             iceCreamBuyers.Add(stringArray[0], iceCream[rand.Next(0,4)]);
             iceCreamBuyers.Add(stringArray[1], iceCream[rand.Next(0,4)]);
-            iceCreamBuyers.Add(stringArray[2], iceCream[r and.Next(0,4)]);
+            iceCreamBuyers.Add(stringArray[2], iceCream[rand.Next(0,4)]);
             iceCreamBuyers.Add(stringArray[3], iceCream[rand.Next(0,4)]);
 
             foreach (var item in iceCreamBuyers)
