@@ -1,0 +1,12 @@
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/bin/Debug/netcoreapp3.1/binarySearch.deps.json
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/bin/Debug/netcoreapp3.1/binarySearch.runtimeconfig.json
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/bin/Debug/netcoreapp3.1/binarySearch.runtimeconfig.dev.json
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/bin/Debug/netcoreapp3.1/binarySearch.dll
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/bin/Debug/netcoreapp3.1/binarySearch.pdb
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.csprojAssemblyReference.cache
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.AssemblyInfoInputs.cache
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.AssemblyInfo.cs
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.csproj.CoreCompileInputs.cache
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.dll
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.pdb
+/Users/shawn/Documents/codingDojo/AlgoPractice/csharpAlgos/binarySearch/obj/Debug/netcoreapp3.1/binarySearch.genruntimeconfig.cache
