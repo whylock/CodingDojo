@@ -2,14 +2,14 @@ using System;
 
 namespace human
 {
-    class Human
+    public class Human
 {
     // Fields for Human
     public string Name;
     public int Strength;
     public int Intelligence;
     public int Dexterity;
-    private int Health;
+    public int Health;
      
     // add a public "getter" property to access health
     public string HealthProp
@@ -39,13 +39,15 @@ namespace human
     }
      
     // Build Attack method
-    public string Attack(Human target)
-    {
-        if(target is Human)
-        {
-            return $"{target.Name}: Hit for {target.Health -= Strength * 1.75} points of damage by {this.Name}";
+    public virtual string Attack(Object focus)
+    {  
+            if(focus is Human)
+            {
+                Human target = focus as Human;
+                return $"{target.Name}: Hit for {target.Health -= Strength * 2} points of damage by {this.Name}";
+            }
+            return $"You have attacked something that doesn't exist!";
         }
-    }
 }
 
 }
