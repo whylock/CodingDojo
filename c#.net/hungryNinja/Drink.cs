@@ -1,10 +1,8 @@
-using System;
-
 namespace hungryNinja
 {
-    class Food : IConsumable
+    public class Drink : IConsumable
     {
-        public string Name { get; set; }
+         public string Name { get; set; }
         public int Calories { get; set; }
         // Foods can be Spicy and/or Sweet
         public bool IsSpicy { get; set; }
@@ -16,13 +14,12 @@ namespace hungryNinja
             return $"Food Name: {Name}, Calories: {Calories}, Spicy: {IsSpicy}, Sweet: {IsSweet}";
         }
 
-        public Food(string selfName, int setCals, bool setSpicy, bool setSweet)
+        public Drink(string name, int cals, bool spice, bool sweet)
         {
-            Name = selfName;
-            Calories = setCals;
-            IsSpicy = setSpicy;
-            IsSweet = setSweet;
+            Name = name;
+            Calories = cals;
+            IsSpicy = spice;
+            IsSweet = sweet;
         }
     }
-
 }

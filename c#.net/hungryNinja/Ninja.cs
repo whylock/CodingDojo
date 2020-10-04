@@ -3,49 +3,38 @@ using System.Collections.Generic;
 
 namespace hungryNinja
 {
-    class Ninja
+    public abstract class Ninja
     {
-        public string Name;
-        private int calorieIntake;
-        public List<Food> FoodHistory;
+        protected int calorieIntake;
+        public List<IConsumable> ConsumptionHistory;
 
         // add a constructor
 
         public Ninja(string selfName)
         {
-            Name = selfName;
             calorieIntake = 0;
-            this.FoodHistory = new List<Food>();
+            this.ConsumptionHistory = new List<IConsumable>();
         }
         public void ClearIntake()
         {   
-            foreach (Food item in FoodHistory)
+            foreach (IConsumable item in ConsumptionHistory)
             {
-                FoodHistory.Remove(item);
+                ConsumptionHistory.Remove(item);
             }
         }
 
-        // add a public "getter" property called "IsFull"
-
-        public bool IsFull
+        public int CalorieIntake 
         {
-            get
+            get 
             {
-                if(this.calorieIntake > 1200)
-                {
-                    return true;
-                }
-                return false;
+                return CalorieIntake;
             }
         }
+
+        public abstract bool IsFull { get; }
 
         // build out the Eat method
-        public string Eat(Food item)
-        {
-            calorieIntake += item.Calories;
-            FoodHistory.Add(item);
-            return $"{this.Name} ate {item.Name}! It has added to the intake list.";
-        }
+        public abstract void Consume(IConsumable item);
     }
 
 }
