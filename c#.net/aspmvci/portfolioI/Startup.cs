@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace helloASPNET
+namespace portfolioI
 {
     public class Startup
     {
@@ -16,7 +16,7 @@ namespace helloASPNET
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Add(options => options.EnableEndpoint.Routing = false);
+            services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,6 +26,8 @@ namespace helloASPNET
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseMvc();
 
             app.UseRouting();
 
@@ -37,7 +39,6 @@ namespace helloASPNET
                 });
             });
 
-            app.UseMvc();
         }
     }
 }
