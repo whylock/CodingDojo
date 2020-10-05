@@ -19,7 +19,7 @@ Taco truck:
             return total;
         }
 
-        public static int XY (int[,], customers)
+        public static int XY (int[,], int[,] customers)
         {
             int minX = customers[0, 0];
             int maxX = customers[0, 0];
