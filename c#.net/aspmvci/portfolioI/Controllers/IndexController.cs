@@ -1,26 +1,24 @@
-using System.Net.Cache;
-using System.Net;
 using Microsoft.AspNetCore.Mvc;
 namespace portfolioI.Controllers
 {
     public class IndexController : Controller
     {
         [HttpGet("")]
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my index";
+            return View();
         }
 
         [HttpGet("projects")]
-        public string Projects()
+        public IActionResult Projects()
         {
-            return "These are my projects!";
+            return View();
         }
 
         [HttpGet("contact")]
-        public string Contact()
+        public IActionResult Contact()
         {
-            return "This is my Contact";
+            return View();
         }
     }
 }

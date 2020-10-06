@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SLL
+namespace newSLL
 {
     class Program
     {
@@ -10,10 +10,17 @@ namespace SLL
             blah.AddNode(new Node(6));
             blah.AddNode(new Node(5));
             blah.AddNode(new Node(4));
-            blah.AddNode(new Node(3));
+            blah.AddNode(new Node(48));
+            blah.AddNode(new Node(57));
+            blah.AddNode(new Node(99));
+            blah.AddNode(new Node(23));
+            blah.AddNode(new Node(35));
+            blah.AddNode(new Node(87));
+            blah.AddNode(new Node(12));
+            blah.AddNode(new Node(32));
             blah.AddNode(new Node(10));
             blah.createLoop();
-            blah.isLooping(blah.head);
+            Console.WriteLine(blah.isLooping(blah.head));
         }
             public class Node
         {
@@ -80,21 +87,19 @@ namespace SLL
                 Node prev = null;
                 Node current = startNode;
                 Node nxt = null;
-                if(current.next == null) return false;
+                if (current.next == null)
+                {
+                    return false;
+                }
                 while(current != null)
                 {
                     nxt = current.next;
                     current.next = prev;
                     prev = current;
                     current = nxt;
-
-                    if(prev == current)
-                    {
-                        return true;
-                    }
                 }
-                return true;
-            }
+                return (prev == startNode);
+        }
 
 
         // public void reverse(SLL linkedList)
@@ -136,5 +141,4 @@ namespace SLL
         }
     }
 }
-    }
 }
