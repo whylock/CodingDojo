@@ -1,0 +1,9 @@
+<div>
+    @using viewmodel_fun.Models
+    @model Users
+    <h1>@ViewData["Title"]</h1>
+    @foreach (var item in @Model.userList)
+    {
+        <p>@item</p>
+    }
+</div>

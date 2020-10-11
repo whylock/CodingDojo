@@ -1,0 +1,9 @@
+<div>
+    @using viewmodel_fun.Models
+    @model Numbers
+    <h1>@ViewData["Title"]</h1>
+    @foreach (var item in @Model.numList)  
+    {   
+        <p>@item</p>
+    }
+</div>
