@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Result";
+}
+
+        <div class='container w-100'>
+            <div class="border p-2 col-6 mx-auto">
+                <h3>Submitted Info:</h3>
+                <table class='ml-4'>
+                    <tr>
+                        <td><h2>Name:</h2></td>
+                        <td><h2>@ViewBag.name</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Dojo Location:</h2></td>
+                        <td><h2>@ViewBag.location</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Favorite Language:</h2></td>
+                        <td><h2>@ViewBag.language</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Comment (optional):</h2></td>
+                        <td><h2>@ViewBag.textarea</h2></td>
+                    </tr>
+                </table>
+                <a href="/" class="btn btn-info">Go Back</a>
+            </div>
+        </div>
