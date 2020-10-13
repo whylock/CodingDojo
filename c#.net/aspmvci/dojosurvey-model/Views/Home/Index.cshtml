@@ -2,17 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Survey
+
         <div class='container w-100'>
             <h1 class="text-center">Coding Dojo Survey</h1>
             <form action="Result" class="mt-4 col-6 border mx-auto" method="post">
                 <div class="p-3">
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label asp-for="name">Name:</label>
                         <input type="text" name="name" class="form-control">
+                        <span asp-validation-for="name" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="location">Dojo Location:</label>
+                        <label asp-for="location">Dojo Location:</label>
                         <select name="location" class="form-control" >
                             <option value="Tulsa" >Tulsa</option>
                             <option value="Seattle">Seattle</option>
@@ -21,19 +24,22 @@
                             <option value="Arlington">Arlington</option>
                             <option value="San Diego">San Diego</option>
                         </select>
+                        <span asp-validation-for="location" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="language">Favorite Language:</label>
+                        <label asp-for="language">Favorite Language:</label>
                         <select name="language" class="form-control" >
                             <option value="JavaScript">JavaScript</option>
                             <option value="Python">Python</option>
                             <option value="C#">C#</option>
                         </select>
+                        <span asp-validation-for="language" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label for="textarea">Comment:</label>
+                        <label asp-for="textarea">Comment:</label>
                         <textarea class="form-control" name="textarea" id="" cols="60" rows="5"></textarea>
+                        <span asp-validation-for="textarea" class="text-danger"></span>
                     </div>
                     <input class="btn btn-block btn-info" type="submit" value="Submit" >
                 </div>

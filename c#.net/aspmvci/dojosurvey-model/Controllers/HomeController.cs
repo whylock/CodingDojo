@@ -14,13 +14,17 @@ namespace dojosurvey_model.Controllers
         [HttpGet("/")]
         public IActionResult Index()
         {
-            return View();
+                return View();
         }
 
         [HttpPost("Result")]
         public IActionResult Result(Survey survey)
         {
-            return View(survey);
+            if(ModelState.IsValid)
+            {
+                return View(survey);
+            }
+            return View("Index");
         }
 
         public IActionResult Redirect()
