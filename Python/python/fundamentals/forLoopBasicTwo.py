@@ -24,7 +24,7 @@ def cPositives(lst):
     print(lst)
 
 
-# cPositives([1, 2, 3, 4, 5, 6, -1, -4])
+cPositives([1, 2, 3, 4, 5, 6, -1, -4])
 
 # 3
 
@@ -56,7 +56,7 @@ def avg(lst):
     return sum / len(lst)
 
 
-avg([1, 2, 3, 4])
+avg([3, 2, 3, 4])
 
 
 # 5
@@ -77,19 +77,20 @@ def length(lst):
 
 
 def min(lst):
+    min = lst[0]
     if len(lst) == 0:
         print("False")
         return False
     else:
         for i in range(0, len(lst), 1):
-            if lst[i] < 0:
-                mini = lst[i]
-    print(mini)
-    return mini
+            if lst[i] < min:
+                min = lst[i]
+    print(min)
+    return min
 
 
 # min([])
-# min([1, 2, 3, 4, 5, 6, -30, -10, -35])
+min([1, 2, 3, 4, 5, 6, -30, -10, -35])
 
 
 # 7

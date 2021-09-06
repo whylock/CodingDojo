@@ -132,10 +132,10 @@ negs([-1, -2, 5, 6, 7, -10]);
 // ==================================
 
 function mma(arr) {
-	let min = 0;
-	let max = 0;
-	let sum = 0;
-	for (let i = 0; i < arr.length; i++) {
+	var min = 0;
+	var max = 0;
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++) {
 		if (arr[i] > max) {
 			max = arr[i];
 		}
@@ -147,7 +147,7 @@ function mma(arr) {
 	return [min, max, sum / arr.length];
 }
 
-mma([1, 5, 10, -2]);
+console.log(mma([1, 5, 10, -2]))
 
 // ====================================
 

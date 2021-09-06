@@ -2,17 +2,18 @@ function wordArray(str) {
 	let array = [];
 	let newStr = "";
 	for (let i = 0; i < str.length; i++) {
-		if (str[i] == " " && str[i + 1] !== " ") {
+		if (str[i] === " " && str[i + 1] !== " ") {
 			array.push(newStr);
 			newStr = "";
-		} else {
+		} else if (str[i] !== " ") {
 			newStr += str[i];
 		}
 	}
 	array.push(newStr);
 	return array;
 }
-// console.log(wordArray("super cool word splitting thing "));
+console.log(wordArray("super cool word splitting           thing"));
+console.log(wordArray("Did I shine my   shoes today?"));
 
 function wordReverse(str) {
 	let word = wordArray(str);
@@ -23,4 +24,4 @@ function wordReverse(str) {
 	return reversed;
 }
 
-console.log(wordReverse("super cool word splitting thing "));
+// console.log(wordReverse("super cool word splitting thing "));

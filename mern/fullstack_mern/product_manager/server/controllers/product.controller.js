@@ -26,7 +26,7 @@ module.exports = {
             .catch(err => res.json(err.errors))
     },
     destroy: (req, res) => {
-        product.deleteOne()
+        product.remove
             .then(data => res.json({ results: data }))
             .catch(err => res.json(err.errors))
     },

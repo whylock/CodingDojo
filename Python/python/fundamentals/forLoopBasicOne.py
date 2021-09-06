@@ -43,3 +43,16 @@ mult = 3
 for lowNum in range(lowNum, highNum + 1):
     if lowNum % mult == 0:
         print(lowNum)
+
+
+
+
+
+user = []
+name = input("What's your name?")
+
+
+user.append(name)
+
+print
+

@@ -13,6 +13,6 @@ const JokeSchema = new mongoose.Schema({
 	}
 });
 
-const User = mongoose.model("Joke", JokeSchema);
+const Joke = mongoose.model("Joke", JokeSchema);
 
 module.exports = Joke;

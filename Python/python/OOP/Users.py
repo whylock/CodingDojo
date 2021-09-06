@@ -63,8 +63,7 @@ class User:
     def transfer_funds(self, other_user, amount):
         self.account_balance -= amount
         other_user.account_balance += amount
-        print(
-            f"You have successfully transferred funds to {other_user.name} in the amount of ${amount}. Remaining acount balance is: ${self.account_balance}")
+        print(f"You have successfully transferred funds to {other_user.name} in the amount of ${amount}. Remaining acount balance is: ${self.account_balance}")
         print(f"{other_user.name}, your balance is now: ${other_user.account_balance}")
 
 

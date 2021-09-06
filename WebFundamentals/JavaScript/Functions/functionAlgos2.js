@@ -134,13 +134,13 @@ incrementSecs([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 // ===============================================
 // 8.
 function prevLengths(arr) {
-	for (let i = arr.length; i >= 0; i--) {
-		arr[i] = arr[i - 1].length;
+	for (let i = arr.length; i > 0; i--) {
+		arr[i] = arr[i - 1].length
 	}
 	return arr;
 }
 
-prevLengths(["hello", "dojo", "awesome"]);
+console.log(prevLengths(["hello", "dojo", "awesome"]));
 
 // ================================================
 // 9.
@@ -167,7 +167,7 @@ function reversify(arr) {
 	return arr;
 }
 
-reversify([1, 2, 3, 4, 5, 6]);
+reversify([1, 2, 3, 4, 5, 6, 7]);
 
 // ==================================================
 // 11.
@@ -229,3 +229,4 @@ function bigUps(arr, num) {
 }
 
 console.log(bigUps([1, 2, 3, 4, 5, 6, 7, 8, 9], 10));
+

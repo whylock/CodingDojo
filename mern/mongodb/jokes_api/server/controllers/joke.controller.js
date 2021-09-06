@@ -36,7 +36,7 @@ module.exports = {
 			.catch((err) => res.json(err.errors));
 	},
 	delete: (req, res) => {
-		Joke.deleteOne({ _id: req.params.id })
+		Joke.remove({ _id: req.params.id })
 			.then(results => res.json({ results: result }))
 			.catch(err => res.json(err.errors))
  	}

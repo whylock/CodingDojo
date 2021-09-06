@@ -35,21 +35,7 @@ factorial(5);
 // our function should accept one argument
 // each number is the sum of the previous two, .
 
-function fibonacci(n) {
-	// index into the sequence
-	var sequence = [0, 1, 1];
-	// starting with values 0 and 1
-	if (n == 0) {
-	// Do this without using recursion first
-	for (let i = 3; i < n; i++) {
-		sequence[i] = sequence[i - 1] + sequence[i - 2];
-	//  sequence[3] = sequence[2]     + sequence[1]
-	//  sequence[4] = sequence[3]     + sequence[2]
-	//  sequence[5] = sequence[4]     + sequence[3]
-	//  sequence[6] = sequence[5]     + sequence[4]
-	}
-	return sequence[n - 1];
-}
+
 
 // 4
 
@@ -96,7 +82,7 @@ nthToLast(3,[5,2,3,6,4,9,7])
 		return secondMax
 	}
 
-secondLargest([42,1,4,3.14,7])
+console.log(secondLargest([42,1,4,3.14,7]))
 
 // 7
 

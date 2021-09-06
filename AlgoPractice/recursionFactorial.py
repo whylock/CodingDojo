@@ -1,4 +1,4 @@
-# // 1 -- Understand the problem
+x# // 1 -- Understand the problem
 # // 2 -- Think of examples
 # // 3 -- Break it down
 # // 4 -- solve or simplify
